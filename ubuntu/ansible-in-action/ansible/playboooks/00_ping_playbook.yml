@@ -1,6 +1,6 @@
 # ansible-playbook playboooks/03_ping_playbook.yml
 ---
-- hosts: kubernetes-cluster
+- hosts: virtual-machine
   # remote_user: iaktas
   order: sorted # inventory, reverse_inventory, sorted, reverse_sorted, shuffle
   tasks:

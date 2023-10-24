@@ -1,0 +1,14 @@
+- name: Install zlib and create a file
+  hosts: virtual-machine 
+  tasks:
+    - name: Install zlib
+      become: true
+      package:
+        name: tree
+        state: present
+      become: yes
+    - name: Create the file /tmp/some_file
+      file:
+        path: '/tmp/some_file'
+        state: touch
+# ansible-playbook playboooks/03_install_create.yml -kK -> use kk parameters. first password is client, second password is ssh
